@@ -18,8 +18,8 @@ const plugin: JupyterFrontEndPlugin<void> = {
     const style = 'jupyterlab-cursor-theme/index.css';
 
     manager.register({
-      name: 'jupyterlab-cursor-theme',
-      isLight: true,
+      name: 'Cursor Dark',
+      isLight: false,
       load: () => manager.loadCSS(style),
       unload: () => Promise.resolve(undefined)
     });

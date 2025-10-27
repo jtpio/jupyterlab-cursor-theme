@@ -33,7 +33,7 @@ all of MD as it is not optimized for dense, information rich UIs.
    * https://material-components-web.appspot.com/elevation.html
    */
 
-  --jp-shadow-base-lightness: 0;
+  --jp-shadow-base-lightness: 20;
   --jp-shadow-umbra-color: rgba(
     var(--jp-shadow-base-lightness),
     var(--jp-shadow-base-lightness),
@@ -90,16 +90,22 @@ all of MD as it is not optimized for dense, information rich UIs.
     0 24px 38px 3px var(--jp-shadow-penumbra-color),
     0 9px 46px 8px var(--jp-shadow-ambient-color);
 
+  /* Shortcut buttons */
+
+  --jp-shortcuts-button-background: #81a1c1;
+  --jp-shortcuts-button-hover-background: #87a6c4;
+
   /* Borders
    *
    * The following variables, specify the visual styling of borders in JupyterLab.
    */
 
   --jp-border-width: 1px;
-  --jp-border-color0: var(--md-grey-400);
-  --jp-border-color1: var(--md-grey-400);
-  --jp-border-color2: var(--md-grey-300);
-  --jp-border-color3: var(--md-grey-200);
+  --jp-border-color0: rgba(228, 228, 228, 0.08);
+  --jp-border-color1: rgba(228, 228, 228, 0.08);
+  --jp-border-color2: rgba(228, 228, 228, 0.12);
+  --jp-border-color3: rgba(228, 228, 228, 0.18);
+  --jp-inverse-border-color: rgba(228, 228, 228, 0.15);
   --jp-border-radius: 2px;
 
   /* UI Fonts
@@ -123,24 +129,24 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /*
    * Use these font colors against the corresponding main layout colors.
-   * In a light theme, these go from dark to light.
+   * In a dark theme, these go from light to dark.
    */
 
-  /* Defaults use Material Design specification */
-  --jp-ui-font-color0: rgba(0, 0, 0, 1);
-  --jp-ui-font-color1: rgba(0, 0, 0, 0.87);
-  --jp-ui-font-color2: rgba(0, 0, 0, 0.54);
-  --jp-ui-font-color3: rgba(0, 0, 0, 0.38);
+  /* Cursor theme colors */
+  --jp-ui-font-color0: rgba(228, 228, 228, 0.92);
+  --jp-ui-font-color1: rgba(228, 228, 228, 0.92);
+  --jp-ui-font-color2: rgba(228, 228, 228, 0.55);
+  --jp-ui-font-color3: rgba(228, 228, 228, 0.37);
 
   /*
    * Use these against the brand/accent/warn/error colors.
    * These will typically go from light to darker, in both a dark and light theme.
    */
 
-  --jp-ui-inverse-font-color0: rgba(255, 255, 255, 1);
-  --jp-ui-inverse-font-color1: rgba(255, 255, 255, 1);
-  --jp-ui-inverse-font-color2: rgba(255, 255, 255, 0.7);
-  --jp-ui-inverse-font-color3: rgba(255, 255, 255, 0.5);
+  --jp-ui-inverse-font-color0: rgba(0, 0, 0, 1);
+  --jp-ui-inverse-font-color1: rgba(0, 0, 0, 0.8);
+  --jp-ui-inverse-font-color2: rgba(0, 0, 0, 0.5);
+  --jp-ui-inverse-font-color3: rgba(0, 0, 0, 0.3);
 
   /* Content Fonts
    *
@@ -167,15 +173,17 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-content-heading-margin-bottom: 0.8em;
   --jp-content-heading-font-weight: 500;
 
-  /* Defaults use Material Design specification */
-  --jp-content-font-color0: rgba(0, 0, 0, 1);
-  --jp-content-font-color1: rgba(0, 0, 0, 0.87);
-  --jp-content-font-color2: rgba(0, 0, 0, 0.54);
-  --jp-content-font-color3: rgba(0, 0, 0, 0.38);
-  --jp-content-link-color: var(--md-blue-700);
+  /* Cursor theme colors */
+  --jp-content-font-color0: rgba(228, 228, 228, 0.92);
+  --jp-content-font-color1: rgba(228, 228, 228, 0.92);
+  --jp-content-font-color2: rgba(228, 228, 228, 0.7);
+  --jp-content-font-color3: rgba(228, 228, 228, 0.5);
+  --jp-content-link-color: #81a1c1;
+  --jp-content-link-visited-color: #b48ead;
+  --jp-content-link-hover-color: #87a6c4;
   --jp-content-font-family:
-    -apple-system, blinkmacsystemfont, 'Segoe UI', helvetica, arial, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', helvetica, arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
   /*
    * Code Fonts
@@ -199,57 +207,58 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Layout
    *
-   * The following are the main layout colors use in JupyterLab. In a light
-   * theme these would go from light to dark.
-   */
-
-  --jp-layout-color0: white;
-  --jp-layout-color1: white;
-  --jp-layout-color2: var(--md-grey-200);
-  --jp-layout-color3: var(--md-grey-400);
-  --jp-layout-color4: var(--md-grey-600);
-
-  /* Inverse Layout
-   *
-   * The following are the inverse layout colors use in JupyterLab. In a light
+   * The following are the main layout colors use in JupyterLab. In a dark
    * theme these would go from dark to light.
    */
 
-  --jp-inverse-layout-color0: #111;
-  --jp-inverse-layout-color1: var(--md-grey-900);
-  --jp-inverse-layout-color2: var(--md-grey-800);
-  --jp-inverse-layout-color3: var(--md-grey-700);
-  --jp-inverse-layout-color4: var(--md-grey-600);
+  --jp-layout-color0: #181818;
+  --jp-layout-color1: #141414;
+  --jp-layout-color2: #262626;
+  --jp-layout-color3: #343434;
+  --jp-layout-color4: #404040;
+
+  /* Inverse Layout
+   *
+   * The following are the inverse layout colors use in JupyterLab. In a dark
+   * theme these would go from light to dark.
+   */
+
+  --jp-inverse-layout-color0: rgba(228, 228, 228, 0.92);
+  --jp-inverse-layout-color1: rgba(228, 228, 228, 0.8);
+  --jp-inverse-layout-color2: rgba(228, 228, 228, 0.6);
+  --jp-inverse-layout-color3: rgba(228, 228, 228, 0.4);
+  --jp-inverse-layout-color4: rgba(228, 228, 228, 0.3);
 
   /* Brand/accent */
 
-  --jp-brand-color0: #ec0c4b;
-  --jp-brand-color1: #ed225d;
-  --jp-brand-color2: #ee376b;
-  --jp-brand-color3: #ee3b6e;
-  --jp-accent-color0: var(--md-green-700);
-  --jp-accent-color1: var(--md-green-500);
-  --jp-accent-color2: var(--md-green-300);
-  --jp-accent-color3: var(--md-green-100);
+  --jp-brand-color0: #6a8caf;
+  --jp-brand-color1: #81a1c1;
+  --jp-brand-color2: #87a6c4;
+  --jp-brand-color3: #9db5cc;
+  --jp-brand-color4: #b3c4d8;
+  --jp-accent-color0: #2e8a51;
+  --jp-accent-color1: #3fa266;
+  --jp-accent-color2: #70b489;
+  --jp-accent-color3: #a0d4b5;
 
   /* State colors (warn, error, success, info) */
 
-  --jp-warn-color0: var(--md-orange-700);
-  --jp-warn-color1: var(--md-orange-500);
-  --jp-warn-color2: var(--md-orange-300);
-  --jp-warn-color3: var(--md-orange-100);
-  --jp-error-color0: var(--md-red-700);
-  --jp-error-color1: var(--md-red-500);
-  --jp-error-color2: var(--md-red-300);
-  --jp-error-color3: var(--md-red-100);
-  --jp-success-color0: var(--md-green-700);
-  --jp-success-color1: var(--md-green-500);
-  --jp-success-color2: var(--md-green-300);
-  --jp-success-color3: var(--md-green-100);
-  --jp-info-color0: var(--md-cyan-700);
-  --jp-info-color1: var(--md-cyan-500);
-  --jp-info-color2: var(--md-cyan-300);
-  --jp-info-color3: var(--md-cyan-100);
+  --jp-warn-color0: #b97a30;
+  --jp-warn-color1: #d2943e;
+  --jp-warn-color2: #f1b467;
+  --jp-warn-color3: #f5c88d;
+  --jp-error-color0: #b80049;
+  --jp-error-color1: #e34671;
+  --jp-error-color2: #fc6b83;
+  --jp-error-color3: #ff9bb0;
+  --jp-success-color0: #2e8a51;
+  --jp-success-color1: #3fa266;
+  --jp-success-color2: #70b489;
+  --jp-success-color3: #a0d4b5;
+  --jp-info-color0: #6a8caf;
+  --jp-info-color1: #88c0d0;
+  --jp-info-color2: #9bcfe0;
+  --jp-info-color3: #b8e0ec;
 
   /* Cell specific styles */
 
@@ -257,31 +266,29 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-cell-collapser-width: 8px;
   --jp-cell-collapser-min-height: 20px;
   --jp-cell-collapser-not-active-hover-opacity: 0.6;
-  --jp-cell-editor-background: var(--md-grey-100);
-  --jp-cell-editor-border-color: var(--md-grey-300);
-  --jp-cell-editor-box-shadow: inset 0 0 2px var(--md-blue-300);
+  --jp-cell-editor-background: var(--jp-layout-color1);
+  --jp-cell-editor-border-color: rgba(228, 228, 228, 0.08);
+  --jp-cell-editor-box-shadow: inset 0 0 2px #81a1c1;
   --jp-cell-editor-active-background: var(--jp-layout-color0);
   --jp-cell-editor-active-border-color: var(--jp-brand-color1);
   --jp-cell-prompt-width: 64px;
-  --jp-cell-prompt-font-family: 'Source Code Pro', monospace;
+  --jp-cell-prompt-font-family: var(--jp-code-font-family-default);
   --jp-cell-prompt-letter-spacing: 0;
   --jp-cell-prompt-opacity: 1;
-  --jp-cell-prompt-not-active-opacity: 0.5;
-  --jp-cell-prompt-not-active-font-color: var(--md-grey-700);
+  --jp-cell-prompt-not-active-opacity: 1;
+  --jp-cell-prompt-not-active-font-color: rgba(228, 228, 228, 0.26);
 
-  /* A custom blend of MD grey and blue 600
-   * See https://meyerweb.com/eric/tools/color-blend/#546E7A:1E88E5:5:hex */
-  --jp-cell-inprompt-font-color: #307fc1;
+  /* Cursor theme prompt colors */
+  --jp-cell-inprompt-font-color: #81a1c1;
 
-  /* A custom blend of MD grey and orange 600
-   * https://meyerweb.com/eric/tools/color-blend/#546E7A:F4511E:5:hex */
-  --jp-cell-outprompt-font-color: #bf5b3d;
+  /* Cursor theme output prompt color */
+  --jp-cell-outprompt-font-color: #d2943e;
 
   /* Notebook specific styles */
 
   --jp-notebook-padding: 10px;
   --jp-notebook-select-background: var(--jp-layout-color1);
-  --jp-notebook-multiselected-color: var(--md-blue-50);
+  --jp-notebook-multiselected-color: rgba(129, 161, 193, 0.24);
 
   /* The scroll padding is calculated to fill enough space at the bottom of the
   notebook to show one single-line cell (with appropriate padding) at the top
@@ -296,13 +303,13 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Rendermime styles */
 
-  --jp-rendermime-error-background: #fdd;
-  --jp-rendermime-table-row-background: var(--md-grey-100);
-  --jp-rendermime-table-row-hover-background: var(--md-light-blue-50);
+  --jp-rendermime-error-background: rgba(227, 70, 113, 0.28);
+  --jp-rendermime-table-row-background: #181818;
+  --jp-rendermime-table-row-hover-background: rgba(136, 192, 208, 0.2);
 
   /* Dialog specific styles */
 
-  --jp-dialog-background: rgba(0, 0, 0, 0.25);
+  --jp-dialog-background: rgba(0, 0, 0, 0.6);
 
   /* Console specific styles */
 
@@ -310,12 +317,12 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Toolbar specific styles */
 
-  --jp-toolbar-border-color: var(--jp-border-color1);
+  --jp-toolbar-border-color: var(--jp-border-color2);
   --jp-toolbar-micro-height: 8px;
   --jp-toolbar-background: var(--jp-layout-color1);
-  --jp-toolbar-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.24);
+  --jp-toolbar-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
   --jp-toolbar-header-margin: 4px 4px 0 4px;
-  --jp-toolbar-active-background: var(--md-grey-300);
+  --jp-toolbar-active-background: var(--jp-layout-color0);
 
   /* Statusbar specific styles */
 
@@ -323,45 +330,46 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Input field styles */
 
-  --jp-input-box-shadow: inset 0 0 2px var(--md-blue-300);
-  --jp-input-active-background: var(--jp-layout-color1);
-  --jp-input-hover-background: var(--jp-layout-color1);
-  --jp-input-background: var(--md-grey-100);
-  --jp-input-border-color: var(--jp-border-color1);
+  --jp-input-box-shadow: inset 0 0 2px #81a1c1;
+  --jp-input-active-background: var(--jp-layout-color0);
+  --jp-input-hover-background: var(--jp-layout-color2);
+  --jp-input-background: rgba(228, 228, 228, 0.04);
+  --jp-input-border-color: var(--jp-inverse-border-color);
   --jp-input-active-border-color: var(--jp-brand-color1);
+  --jp-input-active-box-shadow-color: rgba(129, 161, 193, 0.3);
 
   /* General editor styles */
 
-  --jp-editor-selected-background: #d9d9d9;
-  --jp-editor-selected-focused-background: #d7d4f0;
-  --jp-editor-cursor-color: var(--jp-ui-font-color0);
+  --jp-editor-selected-background: rgba(64, 64, 64, 0.6);
+  --jp-editor-selected-focused-background: rgba(129, 161, 193, 0.24);
+  --jp-editor-cursor-color: rgba(228, 228, 228, 0.92);
 
-  /* Code mirror specific styles */
+  /* Code mirror specific styles - Cursor theme syntax colors */
 
-  --jp-mirror-editor-keyword-color: #008000;
-  --jp-mirror-editor-atom-color: #88f;
-  --jp-mirror-editor-number-color: #080;
-  --jp-mirror-editor-def-color: #00f;
-  --jp-mirror-editor-variable-color: var(--md-grey-900);
-  --jp-mirror-editor-variable-2-color: #05a;
-  --jp-mirror-editor-variable-3-color: #085;
-  --jp-mirror-editor-punctuation-color: #05a;
-  --jp-mirror-editor-property-color: #05a;
-  --jp-mirror-editor-operator-color: #a2f;
-  --jp-mirror-editor-comment-color: #408080;
-  --jp-mirror-editor-string-color: #ba2121;
-  --jp-mirror-editor-string-2-color: #708;
-  --jp-mirror-editor-meta-color: #a2f;
-  --jp-mirror-editor-qualifier-color: #555;
-  --jp-mirror-editor-builtin-color: #008000;
-  --jp-mirror-editor-bracket-color: #997;
-  --jp-mirror-editor-tag-color: #170;
-  --jp-mirror-editor-attribute-color: #00c;
-  --jp-mirror-editor-header-color: blue;
-  --jp-mirror-editor-quote-color: #090;
-  --jp-mirror-editor-link-color: #00c;
-  --jp-mirror-editor-error-color: #f00;
-  --jp-mirror-editor-hr-color: #999;
+  --jp-mirror-editor-keyword-color: #82d2ce;
+  --jp-mirror-editor-atom-color: #82d2ce;
+  --jp-mirror-editor-number-color: #a8cc7c;
+  --jp-mirror-editor-def-color: #ebc88d;
+  --jp-mirror-editor-variable-color: #d6d6dd;
+  --jp-mirror-editor-variable-2-color: #aaa0fa;
+  --jp-mirror-editor-variable-3-color: #a8cc7c;
+  --jp-mirror-editor-punctuation-color: #d6d6dd;
+  --jp-mirror-editor-property-color: #aaa0fa;
+  --jp-mirror-editor-operator-color: #82d2ce;
+  --jp-mirror-editor-comment-color: #a4a4a4;
+  --jp-mirror-editor-string-color: #e394dc;
+  --jp-mirror-editor-string-2-color: #e394dc;
+  --jp-mirror-editor-meta-color: #aaa0fa;
+  --jp-mirror-editor-qualifier-color: #d6d6dd;
+  --jp-mirror-editor-builtin-color: #f8c762;
+  --jp-mirror-editor-bracket-color: #d6d6dd;
+  --jp-mirror-editor-tag-color: #aaa0fa;
+  --jp-mirror-editor-attribute-color: #efb080;
+  --jp-mirror-editor-header-color: #87c3ff;
+  --jp-mirror-editor-quote-color: #a8cc7c;
+  --jp-mirror-editor-link-color: #87c3ff;
+  --jp-mirror-editor-error-color: #e34671;
+  --jp-mirror-editor-hr-color: #d6d6dd;
 
   /* User colors */
 
@@ -373,26 +381,76 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-collaborator-color6: #8b45c6;
   --jp-collaborator-color7: #be208b;
 
-  /* File or activity icons and switch semantic variables */
-
-  --jp-jupyter-icon-color: var(--md-orange-900);
-  --jp-notebook-icon-color: var(--md-orange-700);
-  --jp-json-icon-color: var(--md-orange-700);
-  --jp-console-icon-background-color: var(--md-blue-700);
-  --jp-console-icon-color: white;
-  --jp-terminal-icon-background-color: var(--md-grey-200);
-  --jp-terminal-icon-color: var(--md-grey-800);
-  --jp-text-editor-icon-color: var(--md-grey-200);
-  --jp-inspector-icon-color: var(--md-grey-200);
-  --jp-switch-color: var(--md-grey-400);
-  --jp-switch-true-position-color: var(--md-orange-700);
-  --jp-switch-cursor-color: rgba(0, 0, 0, 0.8);
-
   /* Vega extension styles */
 
-  --jp-vega-background: white;
+  --jp-vega-background: #181818;
 
   /* Sidebar-related styles */
 
-  --jp-sidebar-min-width: 180px;
+  --jp-sidebar-min-width: 250px;
+
+  /* Search-related styles */
+
+  --jp-search-toggle-off-opacity: 0.6;
+  --jp-search-toggle-hover-opacity: 0.8;
+  --jp-search-toggle-on-opacity: 1;
+  --jp-search-selected-match-background-color: rgba(136, 192, 208, 0.4);
+  --jp-search-selected-match-color: #141414;
+  --jp-search-unselected-match-background-color: rgba(136, 192, 208, 0.27);
+  --jp-search-unselected-match-color: var(--jp-ui-inverse-font-color0);
+
+  /* Scrollbar related styles */
+
+  --jp-scrollbar-background-color: #181818;
+  --jp-scrollbar-thumb-color: 228, 228, 228;
+  --jp-scrollbar-endpad: 3px;
+  --jp-scrollbar-thumb-margin: 3.5px;
+  --jp-scrollbar-thumb-radius: 9px;
+
+  /* Icon colors that work well with dark backgrounds */
+  --jp-icon-contrast-color0: #b48ead;
+  --jp-icon-contrast-color1: #3fa266;
+  --jp-icon-contrast-color2: #e34671;
+  --jp-icon-contrast-color3: #81a1c1;
+
+  /* Button colors */
+  --jp-accept-color-normal: #6a8caf;
+  --jp-accept-color-hover: #81a1c1;
+  --jp-accept-color-active: #87a6c4;
+  --jp-warn-color-normal: #b80049;
+  --jp-warn-color-hover: #e34671;
+  --jp-warn-color-active: #fc6b83;
+  --jp-reject-color-normal: #626262;
+  --jp-reject-color-hover: #818181;
+  --jp-reject-color-active: #a0a0a0;
+
+  /* File or activity icons and switch semantic variables */
+  --jp-jupyter-icon-color: #d2943e;
+  --jp-notebook-icon-color: #d2943e;
+  --jp-json-icon-color: #d2943e;
+  --jp-console-icon-background-color: #81a1c1;
+  --jp-console-icon-color: #141414;
+  --jp-terminal-icon-background-color: #343434;
+  --jp-terminal-icon-color: rgba(228, 228, 228, 0.92);
+  --jp-text-editor-icon-color: rgba(228, 228, 228, 0.55);
+  --jp-inspector-icon-color: rgba(228, 228, 228, 0.55);
+  --jp-switch-color: #626262;
+  --jp-switch-true-position-color: #81a1c1;
+  --jp-switch-cursor-color: rgba(228, 228, 228, 0.8);
+}
+
+/* Completer specific styles */
+
+.jp-Completer {
+  --jp-completer-type-background0: transparent;
+  --jp-completer-type-background1: #1f77b4;
+  --jp-completer-type-background2: #ff7f0e;
+  --jp-completer-type-background3: #2ca02c;
+  --jp-completer-type-background4: #d62728;
+  --jp-completer-type-background5: #9467bd;
+  --jp-completer-type-background6: #8c564b;
+  --jp-completer-type-background7: #e377c2;
+  --jp-completer-type-background8: #7f7f7f;
+  --jp-completer-type-background9: #bcbd22;
+  --jp-completer-type-background10: #17becf;
 }

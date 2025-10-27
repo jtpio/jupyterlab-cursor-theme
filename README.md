@@ -1,8 +1,13 @@
-# jupyterlab_cursor_theme
+# jupyterlab-cursor-theme
 
 [![Github Actions Status](https://github.com/jtpio/jupyterlab-cursor-theme/workflows/Build/badge.svg)](https://github.com/jtpio/jupyterlab-cursor-theme/actions/workflows/build.yml)
 
-JupyterLab theme with Cursor vibes
+JupyterLab theme with Cursor vibes.
+
+![a screenshot of the JupyterLab Cursor theme](./screenshot.png)
+
+> [!NOTE]
+> This theme is heavily inspired by the default Cursor Dark theme, but it is not an official Cursor product.
 
 ## Requirements
 
@@ -13,7 +18,7 @@ JupyterLab theme with Cursor vibes
 To install the extension, execute:
 
 ```bash
-pip install jupyterlab_cursor_theme
+pip install jupyterlab-cursor-theme
 ```
 
 ## Uninstall
@@ -21,7 +26,7 @@ pip install jupyterlab_cursor_theme
 To remove the extension, execute:
 
 ```bash
-pip uninstall jupyterlab_cursor_theme
+pip uninstall jupyterlab-cursor-theme
 ```
 
 ## Contributing

@@ -10,3 +10,18 @@ pre {
   font-size: var(--jp-code-font-size);
   line-height: var(--jp-code-line-height);
 }
+
+/* Additional CodeMirror 6 token styling */
+
+/* These tags are not defined in JupyterLab's default theme */
+
+/* Class names and type names - light blue */
+.cm-editor .tok-className,
+.cm-editor .tok-typeName {
+  color: #87c3ff !important;
+}
+
+/* Function calls (like Unicode(), Bool(), Integer()) - light blue */
+.cm-editor .tok-function:not(.tok-definition) {
+  color: #87c3ff !important;
+}
