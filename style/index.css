@@ -29,7 +29,7 @@ pre {
 /* Override FAST design system variables for tree items */
 jp-tree-item.jp-TreeItem {
   /* Override the neutral-fill-stealth variables used by FAST components */
-  --neutral-fill-stealth-rest: var(--jp-layout-color2) !important;
-  --neutral-fill-stealth-hover: var(--jp-layout-color3) !important;
-  --neutral-fill-stealth-active: var(--jp-layout-color2) !important;
+  --neutral-fill-stealth-rest: var(--jp-layout-color0) !important;
+  --neutral-fill-stealth-hover: var(--jp-layout-color2) !important;
+  --neutral-fill-stealth-active: var(--jp-layout-color0) !important;
 }
