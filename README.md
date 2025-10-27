@@ -1,6 +1,7 @@
 # jupyterlab-cursor-theme
 
 [![Github Actions Status](https://github.com/jtpio/jupyterlab-cursor-theme/workflows/Build/badge.svg)](https://github.com/jtpio/jupyterlab-cursor-theme/actions/workflows/build.yml)
+[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jtpio.github.io/jupyterlab-cursor-theme/lab/index.html)
 
 JupyterLab theme with Cursor vibes.
 
