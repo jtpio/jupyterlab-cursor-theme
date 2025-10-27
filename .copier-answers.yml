@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.4.0
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: ''
+author_name: Jeremy Tuloup
+has_binder: false
+has_settings: false
+kind: theme
+labextension_name: jupyterlab-cursor-theme
+project_short_description: JupyterLab theme with Cursor vibes
+python_name: jupyterlab_cursor_theme
+repository: https://github.com/jtpio/jupyterlab-cursor-theme
+test: false
+
