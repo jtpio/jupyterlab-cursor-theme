@@ -31,7 +31,7 @@ jobs:
 
       - name: Build the JupyterLite site
         run: |
-          uv run jupyter lite build
+          uv run jupyter lite build --output-dir dist
         working-directory: ./demo
 
       - name: Upload artifact
