@@ -2,6 +2,22 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 1.0.1
+
+([Full Changelog](https://github.com/jtpio/jupyterlab-cursor-theme/compare/v1.0.0...8c6962ed25bf401fd0a2326ec103a56a6c79b3f8))
+
+### Enhancements made
+
+- Fix colors [#4](https://github.com/jtpio/jupyterlab-cursor-theme/pull/4) ([@jtpio](https://github.com/jtpio))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jtpio/jupyterlab-cursor-theme/graphs/contributors?from=2025-10-27&to=2025-10-27&type=c))
+
+[@jtpio](https://github.com/search?q=repo%3Ajtpio%2Fjupyterlab-cursor-theme+involves%3Ajtpio+updated%3A2025-10-27..2025-10-27&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 1.0.0
 
 The first release ✨
@@ -22,5 +38,3 @@ The first release ✨
 ([GitHub contributors page for this release](https://github.com/jtpio/jupyterlab-cursor-theme/graphs/contributors?from=2025-10-27&to=2025-10-27&type=c))
 
 [@jtpio](https://github.com/search?q=repo%3Ajtpio%2Fjupyterlab-cursor-theme+involves%3Ajtpio+updated%3A2025-10-27..2025-10-27&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
