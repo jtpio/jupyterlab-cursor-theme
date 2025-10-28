@@ -10,6 +10,10 @@ JupyterLab theme with Cursor vibes.
 > [!NOTE]
 > This theme is heavily inspired by the default Cursor Dark theme, but it is not an official Cursor product.
 
+## ✨ Try it in your browser ✨
+
+➡️ **https://jtpio.github.io/jupyterlab-cursor-theme**
+
 ## Requirements
 
 - JupyterLab >= 4.0.0
