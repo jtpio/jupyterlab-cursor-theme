@@ -155,5 +155,24 @@
             "alpha-value-notation": null,
             "color-function-notation": null
         }
+    },
+    "jupyter-releaser": {
+        "options": {
+            "version-cmd": "hatch version",
+            "python-packages": [
+                "packages/jupyterlab-cursor-dark:jupyterlab_cursor_dark",
+                "packages/jupyterlab-cursor-light:jupyterlab_cursor_light"
+            ]
+        },
+        "hooks": {
+            "before-build-npm": [
+                "python -m pip install 'jupyterlab>=4.0.0,<5'",
+                "jlpm",
+                "jlpm build:prod"
+            ],
+            "before-build-python": [
+                "jlpm clean:all"
+            ]
+        }
     }
 }
