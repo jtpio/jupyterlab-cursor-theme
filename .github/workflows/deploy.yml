@@ -30,6 +30,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Build JS packages
+        run: |
+          uv run --with jupyterlab jlpm install
+          uv run --with jupyterlab jlpm build:prod
+
       - name: Install the project
         run: uv sync --locked --all-extras --dev
         working-directory: ./demo
