@@ -3,16 +3,25 @@
 [![Github Actions Status](https://github.com/jtpio/jupyterlab-cursor-theme/workflows/Build/badge.svg)](https://github.com/jtpio/jupyterlab-cursor-theme/actions/workflows/build.yml)
 [![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jtpio.github.io/jupyterlab-cursor-theme/lab/index.html)
 
-JupyterLab theme with Cursor vibes.
+JupyterLab themes with Cursor vibes.
 
 ![a screenshot of the JupyterLab Cursor theme](./screenshot.png)
 
 > [!NOTE]
-> This theme is heavily inspired by the default Cursor Dark theme, but it is not an official Cursor product.
+> These themes are heavily inspired by the default Cursor themes, but they are not official Cursor products.
 
-## ✨ Try it in your browser ✨
+## Packages
 
-➡️ **https://jtpio.github.io/jupyterlab-cursor-theme**
+This repository contains two JupyterLab theme extensions:
+
+| Package | Description |
+| ------- | ----------- |
+| [jupyterlab-cursor-dark](./packages/jupyterlab-cursor-dark) | JupyterLab dark theme with Cursor vibes |
+| [jupyterlab-cursor-light](./packages/jupyterlab-cursor-light) | JupyterLab light theme with Cursor vibes |
+
+## Try it in your browser
+
+- **https://jtpio.github.io/jupyterlab-cursor-theme**
 
 ## Requirements
 
@@ -20,25 +29,35 @@ JupyterLab theme with Cursor vibes.
 
 ## Install
 
-To install the extension, execute:
+To install the dark theme:
 
 ```bash
-pip install jupyterlab-cursor-theme
+pip install jupyterlab-cursor-dark
+```
+
+To install the light theme:
+
+```bash
+pip install jupyterlab-cursor-light
+```
+
+Or install both:
+
+```bash
+pip install jupyterlab-cursor-dark jupyterlab-cursor-light
 ```
 
 ## Uninstall
 
-To remove the extension, execute:
-
 ```bash
-pip uninstall jupyterlab-cursor-theme
+pip uninstall jupyterlab-cursor-dark jupyterlab-cursor-light
 ```
 
 ## Contributing
 
 ### Development install
 
-Note: You will need NodeJS to build the extension package.
+Note: You will need NodeJS to build the extension packages.
 
 The `jlpm` command is JupyterLab's pinned version of
 [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
@@ -46,13 +65,20 @@ The `jlpm` command is JupyterLab's pinned version of
 
 ```bash
 # Clone the repo to your local environment
-# Change directory to the jupyterlab_cursor_theme directory
-# Install package in development mode
-pip install -e "."
-# Link your development version of the extension with JupyterLab
-jupyter labextension develop . --overwrite
-# Rebuild extension Typescript source after making changes
+# Change directory to the jupyterlab-cursor-theme directory
+# Install dependencies
+jlpm
+
+# Build all packages
 jlpm build
+
+# Install packages in development mode
+pip install -e packages/jupyterlab-cursor-dark
+pip install -e packages/jupyterlab-cursor-light
+
+# Link your development versions of the extensions with JupyterLab
+jupyter labextension develop packages/jupyterlab-cursor-dark --overwrite
+jupyter labextension develop packages/jupyterlab-cursor-light --overwrite
 ```
 
 You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
@@ -66,21 +92,15 @@ jupyter lab
 
 With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab. Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).
 
-By default, the `jlpm build` command generates the source maps for this extension to make it easier to debug using the browser dev tools. To also generate source maps for the JupyterLab core extensions, you can run the following command:
-
-```bash
-jupyter lab build --minimize=False
-```
-
 ### Development uninstall
 
 ```bash
-pip uninstall jupyterlab_cursor_theme
+pip uninstall jupyterlab_cursor_dark jupyterlab_cursor_light
 ```
 
-In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
-command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
-folder is located. Then you can remove the symlink named `jupyterlab-cursor-theme` within that folder.
+In development mode, you will also need to remove the symlinks created by `jupyter labextension develop`
+command. To find their location, you can run `jupyter labextension list` to figure out where the `labextensions`
+folder is located. Then you can remove the symlinks named `jupyterlab-cursor-dark` and `jupyterlab-cursor-light` within that folder.
 
 ### Packaging the extension
 
