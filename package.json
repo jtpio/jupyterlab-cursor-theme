@@ -162,6 +162,11 @@
             "python-packages": [
                 "packages/jupyterlab-cursor-dark:jupyterlab_cursor_dark",
                 "packages/jupyterlab-cursor-light:jupyterlab_cursor_light"
+            ],
+            "pydist-extra-check-cmds": [
+                "pipx run 'validate-pyproject[all]' packages/*/pyproject.toml",
+                "pipx run check-wheel-contents --config packages/jupyterlab-cursor-dark/pyproject.toml {dist_dir}/jupyterlab_cursor_dark*.whl",
+                "pipx run check-wheel-contents --config packages/jupyterlab-cursor-light/pyproject.toml {dist_dir}/jupyterlab_cursor_light*.whl"
             ]
         },
         "hooks": {
