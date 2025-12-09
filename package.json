@@ -165,6 +165,9 @@
             ]
         },
         "hooks": {
+            "after-bump-version": [
+                "python scripts/sync_version.py"
+            ],
             "before-build-npm": [
                 "python -m pip install 'jupyterlab>=4.0.0,<5'",
                 "jlpm",
