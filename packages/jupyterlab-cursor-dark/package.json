@@ -1,6 +1,6 @@
 {
     "name": "jupyterlab-cursor-dark",
-    "version": "1.0.1",
+    "version": "0.1.0",
     "description": "JupyterLab dark theme with Cursor vibes",
     "keywords": [
         "jupyter",

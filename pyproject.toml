@@ -3,6 +3,10 @@
 
 [tool.jupyter-releaser.options]
 version_cmd = "hatch version"
+python_packages = [
+    "packages/jupyterlab-cursor-dark:jupyterlab_cursor_dark",
+    "packages/jupyterlab-cursor-light:jupyterlab_cursor_light",
+]
 
 [tool.jupyter-releaser.hooks]
 before-build-npm = [

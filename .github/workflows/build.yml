@@ -13,6 +13,12 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - jupyterlab-cursor-dark
+          - jupyterlab-cursor-light
 
     steps:
     - name: Checkout
@@ -33,30 +39,36 @@ jobs:
     - name: Build the extension
       run: |
         set -eux
-        python -m pip install .[test]
+        cd packages/${{ matrix.package }}
+        python -m pip install .
 
         jupyter labextension list
-        jupyter labextension list 2>&1 | grep -ie "jupyterlab-cursor-theme.*OK"
+        jupyter labextension list 2>&1 | grep -ie "${{ matrix.package }}.*OK"
         python -m jupyterlab.browser_check
 
     - name: Package the extension
       run: |
         set -eux
-
+        cd packages/${{ matrix.package }}
         pip install build
         python -m build
-        pip uninstall -y "jupyterlab_cursor_theme" jupyterlab
 
     - name: Upload extension packages
       uses: actions/upload-artifact@v4
       with:
-        name: extension-artifacts
-        path: dist/jupyterlab_cursor_theme*
+        name: extension-artifacts-${{ matrix.package }}
+        path: packages/${{ matrix.package }}/dist/*
         if-no-files-found: error
 
   test_isolated:
     needs: build
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - jupyterlab-cursor-dark
+          - jupyterlab-cursor-light
 
     steps:
     - name: Install Python
@@ -66,7 +78,7 @@ jobs:
         architecture: 'x64'
     - uses: actions/download-artifact@v4
       with:
-        name: extension-artifacts
+        name: extension-artifacts-${{ matrix.package }}
     - name: Install and Test
       run: |
         set -eux
@@ -74,13 +86,11 @@ jobs:
         sudo rm -rf $(which node)
         sudo rm -rf $(which node)
 
-        pip install "jupyterlab>=4.0.0,<5" jupyterlab_cursor_theme*.whl
-
+        pip install "jupyterlab>=4.0.0,<5" *.whl
 
         jupyter labextension list
-        jupyter labextension list 2>&1 | grep -ie "jupyterlab-cursor-theme.*OK"
+        jupyter labextension list 2>&1 | grep -ie "${{ matrix.package }}.*OK"
         python -m jupyterlab.browser_check --no-browser-test
-
 
   check_links:
     name: Check Links
