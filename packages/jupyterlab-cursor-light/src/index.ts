@@ -14,7 +14,6 @@ const plugin: JupyterFrontEndPlugin<void> = {
   autoStart: true,
   requires: [IThemeManager],
   activate: (app: JupyterFrontEnd, manager: IThemeManager) => {
-    console.log('JupyterLab extension jupyterlab-cursor-light is activated!');
     const style = 'jupyterlab-cursor-light/index.css';
 
     manager.register({

@@ -14,7 +14,6 @@ const plugin: JupyterFrontEndPlugin<void> = {
   autoStart: true,
   requires: [IThemeManager],
   activate: (app: JupyterFrontEnd, manager: IThemeManager) => {
-    console.log('JupyterLab extension jupyterlab-cursor-dark is activated!');
     const style = 'jupyterlab-cursor-dark/index.css';
 
     manager.register({
