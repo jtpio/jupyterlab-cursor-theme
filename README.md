@@ -5,7 +5,12 @@
 
 JupyterLab themes with Cursor vibes.
 
+### Dark
+
 ![a screenshot of the JupyterLab Cursor dark theme](./screenshot-dark.png)
+
+### Light
+
 ![a screenshot of the JupyterLab Cursor light theme](./screenshot-light.png)
 
 > [!NOTE]
