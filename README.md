@@ -5,7 +5,13 @@
 
 JupyterLab themes with Cursor vibes.
 
-![a screenshot of the JupyterLab Cursor theme](./screenshot.png)
+### Dark
+
+![a screenshot of the JupyterLab Cursor dark theme](./screenshot-dark.png)
+
+### Light
+
+![a screenshot of the JupyterLab Cursor light theme](./screenshot-light.png)
 
 > [!NOTE]
 > These themes are heavily inspired by the default Cursor themes, but they are not official Cursor products.
