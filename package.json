@@ -1,6 +1,6 @@
 {
     "name": "@jupyterlab-cursor-theme/root",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "private": true,
     "description": "JupyterLab themes with Cursor vibes",
     "keywords": [
