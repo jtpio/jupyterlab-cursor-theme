@@ -3,10 +3,10 @@ requires = ["hatchling>=1.5.0", "jupyterlab>=4.0.0,<5", "hatch-nodejs-version>=0
 build-backend = "hatchling.build"
 
 [project]
-name = "jupyterlab_cursor_theme"
+name = "jupyterlab_cursor_light"
 readme = "README.md"
 license = { file = "LICENSE" }
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 classifiers = [
     "Framework :: Jupyter",
     "Framework :: Jupyter :: JupyterLab",
@@ -17,11 +17,11 @@ classifiers = [
     "License :: OSI Approved :: BSD License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
 ]
@@ -34,23 +34,23 @@ source = "nodejs"
 fields = ["description", "authors", "urls", "keywords"]
 
 [tool.hatch.build.targets.sdist]
-artifacts = ["jupyterlab_cursor_theme/labextension"]
+artifacts = ["jupyterlab_cursor_light/labextension"]
 exclude = [".github", "binder"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"jupyterlab_cursor_theme/labextension" = "share/jupyter/labextensions/jupyterlab-cursor-theme"
-"install.json" = "share/jupyter/labextensions/jupyterlab-cursor-theme/install.json"
+"jupyterlab_cursor_light/labextension" = "share/jupyter/labextensions/jupyterlab-cursor-light"
+"install.json" = "share/jupyter/labextensions/jupyterlab-cursor-light/install.json"
 
 [tool.hatch.build.hooks.version]
-path = "jupyterlab_cursor_theme/_version.py"
+path = "jupyterlab_cursor_light/_version.py"
 
 [tool.hatch.build.hooks.jupyter-builder]
 dependencies = ["hatch-jupyter-builder>=0.5"]
 build-function = "hatch_jupyter_builder.npm_builder"
 ensured-targets = [
-    "jupyterlab_cursor_theme/labextension/package.json",
+    "jupyterlab_cursor_light/labextension/package.json",
 ]
-skip-if-exists = ["jupyterlab_cursor_theme/labextension/static/style.js"]
+skip-if-exists = ["jupyterlab_cursor_light/labextension/static/style.js"]
 
 [tool.hatch.build.hooks.jupyter-builder.build-kwargs]
 build_cmd = "build:prod"
@@ -60,7 +60,7 @@ npm = ["jlpm"]
 build_cmd = "install:extension"
 npm = ["jlpm"]
 source_dir = "src"
-build_dir = "jupyterlab_cursor_theme/labextension"
+build_dir = "jupyterlab_cursor_light/labextension"
 
 [tool.jupyter-releaser.options]
 version_cmd = "hatch version"

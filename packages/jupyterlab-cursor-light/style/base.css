@@ -1,0 +1,22 @@
+/* Set the default typography for monospace elements */
+tt,
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--jp-code-font-family);
+  font-size: var(--jp-code-font-size);
+  line-height: var(--jp-code-line-height);
+}
+
+/* Additional CodeMirror 6 token styling */
+
+/* These tags are not defined in JupyterLab's default theme */
+
+/* Override FAST design system variables for tree items */
+jp-tree-item.jp-TreeItem {
+  /* Override the neutral-fill-stealth variables used by FAST components */
+  --neutral-fill-stealth-rest: var(--jp-layout-color0) !important;
+  --neutral-fill-stealth-hover: var(--jp-layout-color2) !important;
+  --neutral-fill-stealth-active: var(--jp-layout-color0) !important;
+}

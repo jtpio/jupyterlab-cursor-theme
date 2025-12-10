@@ -90,90 +90,50 @@ all of MD as it is not optimized for dense, information rich UIs.
     0 24px 38px 3px var(--jp-shadow-penumbra-color),
     0 9px 46px 8px var(--jp-shadow-ambient-color);
 
-  /* Shortcut buttons */
-
-  --jp-shortcuts-button-background: #81a1c1;
-  --jp-shortcuts-button-hover-background: #87a6c4;
-
-  /* Borders
-   *
-   * The following variables, specify the visual styling of borders in JupyterLab.
-   */
-
+  /* Borders */
   --jp-border-width: 1px;
+  --jp-border-radius: 2px;
   --jp-border-color0: rgba(228, 228, 228, 0.08);
   --jp-border-color1: rgba(228, 228, 228, 0.08);
   --jp-border-color2: rgba(228, 228, 228, 0.12);
   --jp-border-color3: rgba(228, 228, 228, 0.18);
   --jp-inverse-border-color: rgba(228, 228, 228, 0.15);
-  --jp-border-radius: 2px;
 
-  /* UI Fonts
-   *
-   * The UI font CSS variables are used for the typography all of the JupyterLab
-   * user interface elements that are not directly user generated content.
-   *
-   * The font sizing here is done assuming that the body font size of --jp-ui-font-size1
-   * is applied to a parent element. When children elements, such as headings, are sized
-   * in em all things will be computed relative to that body size.
-   */
-
+  /* UI Fonts */
   --jp-ui-font-scale-factor: 1.2;
   --jp-ui-font-size0: 0.8333em;
-  --jp-ui-font-size1: 13px; /* Base font size */
+  --jp-ui-font-size1: 13px;
   --jp-ui-font-size2: 1.2em;
   --jp-ui-font-size3: 1.44em;
   --jp-ui-font-family:
     -apple-system, blinkmacsystemfont, 'Segoe UI', helvetica, arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-
-  /*
-   * Use these font colors against the corresponding main layout colors.
-   * In a dark theme, these go from light to dark.
-   */
-
-  /* Cursor theme colors */
   --jp-ui-font-color0: rgba(228, 228, 228, 0.92);
   --jp-ui-font-color1: rgba(228, 228, 228, 0.92);
   --jp-ui-font-color2: rgba(228, 228, 228, 0.55);
   --jp-ui-font-color3: rgba(228, 228, 228, 0.37);
-
-  /*
-   * Use these against the brand/accent/warn/error colors.
-   * These will typically go from light to darker, in both a dark and light theme.
-   */
-
   --jp-ui-inverse-font-color0: rgba(0, 0, 0, 1);
   --jp-ui-inverse-font-color1: rgba(0, 0, 0, 0.8);
   --jp-ui-inverse-font-color2: rgba(0, 0, 0, 0.5);
   --jp-ui-inverse-font-color3: rgba(0, 0, 0, 0.3);
 
-  /* Content Fonts
-   *
-   * Content font variables are used for typography of user generated content.
-   *
-   * The font sizing here is done assuming that the body font size of --jp-content-font-size1
-   * is applied to a parent element. When children elements, such as headings, are sized
-   * in em all things will be computed relative to that body size.
-   */
-
+  /* Content Fonts */
   --jp-content-line-height: 1.6;
   --jp-content-font-scale-factor: 1.2;
   --jp-content-font-size0: 0.8333em;
-  --jp-content-font-size1: 14px; /* Base font size */
+  --jp-content-font-size1: 14px;
   --jp-content-font-size2: 1.2em;
   --jp-content-font-size3: 1.44em;
   --jp-content-font-size4: 1.728em;
   --jp-content-font-size5: 2.0736em;
-
-  /* This gives a magnification of about 125% in presentation mode over normal. */
   --jp-content-presentation-font-size1: 17px;
   --jp-content-heading-line-height: 1;
   --jp-content-heading-margin-top: 1.2em;
   --jp-content-heading-margin-bottom: 0.8em;
   --jp-content-heading-font-weight: 500;
-
-  /* Cursor theme colors */
+  --jp-content-font-family:
+    system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', helvetica, arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --jp-content-font-color0: rgba(228, 228, 228, 0.92);
   --jp-content-font-color1: rgba(228, 228, 228, 0.92);
   --jp-content-font-color2: rgba(228, 228, 228, 0.7);
@@ -181,56 +141,31 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-content-link-color: #81a1c1;
   --jp-content-link-visited-color: #b48ead;
   --jp-content-link-hover-color: #87a6c4;
-  --jp-content-font-family:
-    system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', helvetica, arial,
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
-  /*
-   * Code Fonts
-   *
-   * Code font variables are used for typography of code and other monospaces content.
-   */
-
+  /* Code Fonts */
   --jp-code-font-size: 13px;
-  --jp-code-line-height: 1.3077; /* 17px for 13px base */
-  --jp-code-padding: 0.385em; /* 5px for 13px base */
+  --jp-code-line-height: 1.3077;
+  --jp-code-padding: 0.385em;
   --jp-code-font-family-default: menlo, consolas, 'DejaVu Sans Mono', monospace;
   --jp-code-font-family: var(--jp-code-font-family-default);
-
-  /* This gives a magnification of about 125% in presentation mode over normal. */
   --jp-code-presentation-font-size: 16px;
-
-  /* may need to tweak cursor width if you change font size */
   --jp-code-cursor-width0: 1.4px;
   --jp-code-cursor-width1: 2px;
   --jp-code-cursor-width2: 4px;
 
-  /* Layout
-   *
-   * The following are the main layout colors use in JupyterLab. In a dark
-   * theme these would go from dark to light.
-   */
-
+  /* Layout colors */
   --jp-layout-color0: #181818;
   --jp-layout-color1: #141414;
   --jp-layout-color2: #262626;
   --jp-layout-color3: #343434;
   --jp-layout-color4: #404040;
-
-  /* Inverse Layout
-   *
-   * The following are the inverse layout colors use in JupyterLab. In a dark
-   * theme these would go from light to dark.
-   */
-
   --jp-inverse-layout-color0: rgba(228, 228, 228, 0.92);
   --jp-inverse-layout-color1: rgba(228, 228, 228, 0.8);
   --jp-inverse-layout-color2: rgba(228, 228, 228, 0.6);
   --jp-inverse-layout-color3: rgba(228, 228, 228, 0.4);
   --jp-inverse-layout-color4: rgba(228, 228, 228, 0.3);
 
-  /* Brand/accent */
-
+  /* Brand/Accent colors */
   --jp-brand-color0: #6a8caf;
   --jp-brand-color1: #81a1c1;
   --jp-brand-color2: #87a6c4;
@@ -241,8 +176,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-accent-color2: #70b489;
   --jp-accent-color3: #a0d4b5;
 
-  /* State colors (warn, error, success, info) */
-
+  /* State colors */
   --jp-warn-color0: #b97a30;
   --jp-warn-color1: #d2943e;
   --jp-warn-color2: #f1b467;
@@ -261,91 +195,70 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-info-color3: #b8e0ec;
 
   /* Cell specific styles */
-
   --jp-cell-padding: 5px;
   --jp-cell-collapser-width: 8px;
   --jp-cell-collapser-min-height: 20px;
   --jp-cell-collapser-not-active-hover-opacity: 0.6;
   --jp-cell-editor-background: var(--jp-layout-color1);
-  --jp-cell-editor-border-color: rgba(228, 228, 228, 0.08);
-  --jp-cell-editor-box-shadow: inset 0 0 2px #81a1c1;
   --jp-cell-editor-active-background: var(--jp-layout-color0);
   --jp-cell-editor-active-border-color: var(--jp-brand-color1);
+  --jp-cell-editor-border-color: rgba(228, 228, 228, 0.08);
+  --jp-cell-editor-box-shadow: inset 0 0 2px #81a1c1;
   --jp-cell-prompt-width: 64px;
   --jp-cell-prompt-font-family: var(--jp-code-font-family-default);
   --jp-cell-prompt-letter-spacing: 0;
   --jp-cell-prompt-opacity: 1;
   --jp-cell-prompt-not-active-opacity: 1;
   --jp-cell-prompt-not-active-font-color: rgba(228, 228, 228, 0.26);
-
-  /* Cursor theme prompt colors */
   --jp-cell-inprompt-font-color: #81a1c1;
-
-  /* Cursor theme output prompt color */
   --jp-cell-outprompt-font-color: #d2943e;
 
   /* Notebook specific styles */
-
   --jp-notebook-padding: 10px;
   --jp-notebook-select-background: var(--jp-layout-color1);
   --jp-notebook-multiselected-color: rgba(129, 161, 193, 0.24);
-
-  /* The scroll padding is calculated to fill enough space at the bottom of the
-  notebook to show one single-line cell (with appropriate padding) at the top
-  when the notebook is scrolled all the way to the bottom. We also subtract one
-  pixel so that no scrollbar appears if we have just one single-line cell in the
-  notebook. This padding is to enable a 'scroll past end' feature in a notebook.
-  */
   --jp-notebook-scroll-padding: calc(
     100% - var(--jp-code-font-size) * var(--jp-code-line-height) -
       var(--jp-code-padding) - var(--jp-cell-padding) - 1px
   );
 
-  /* Rendermime styles */
+  /* Console specific styles */
+  --jp-console-padding: 10px;
 
+  /* Toolbar specific styles */
+  --jp-toolbar-border-color: var(--jp-border-color2);
+  --jp-toolbar-micro-height: 8px;
+  --jp-toolbar-background: var(--jp-layout-color1);
+  --jp-toolbar-header-margin: 4px 4px 0 4px;
+  --jp-toolbar-active-background: var(--jp-layout-color0);
+  --jp-toolbar-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+
+  /* Statusbar specific styles */
+  --jp-statusbar-height: 24px;
+
+  /* Input field styles */
+  --jp-input-active-background: var(--jp-layout-color0);
+  --jp-input-hover-background: var(--jp-layout-color2);
+  --jp-input-border-color: var(--jp-inverse-border-color);
+  --jp-input-active-border-color: var(--jp-brand-color1);
+  --jp-input-box-shadow: inset 0 0 2px #81a1c1;
+  --jp-input-background: rgba(228, 228, 228, 0.04);
+  --jp-input-active-box-shadow-color: rgba(129, 161, 193, 0.3);
+
+  /* Rendermime styles */
   --jp-rendermime-error-background: rgba(227, 70, 113, 0.28);
   --jp-rendermime-table-row-background: #181818;
   --jp-rendermime-table-row-hover-background: rgba(136, 192, 208, 0.2);
 
-  /* Dialog specific styles */
-
+  /* Dialog styles */
   --jp-dialog-background: rgba(0, 0, 0, 0.6);
 
-  /* Console specific styles */
-
-  --jp-console-padding: 10px;
-
-  /* Toolbar specific styles */
-
-  --jp-toolbar-border-color: var(--jp-border-color2);
-  --jp-toolbar-micro-height: 8px;
-  --jp-toolbar-background: var(--jp-layout-color1);
-  --jp-toolbar-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
-  --jp-toolbar-header-margin: 4px 4px 0 4px;
-  --jp-toolbar-active-background: var(--jp-layout-color0);
-
-  /* Statusbar specific styles */
-
-  --jp-statusbar-height: 24px;
-
-  /* Input field styles */
-
-  --jp-input-box-shadow: inset 0 0 2px #81a1c1;
-  --jp-input-active-background: var(--jp-layout-color0);
-  --jp-input-hover-background: var(--jp-layout-color2);
-  --jp-input-background: rgba(228, 228, 228, 0.04);
-  --jp-input-border-color: var(--jp-inverse-border-color);
-  --jp-input-active-border-color: var(--jp-brand-color1);
-  --jp-input-active-box-shadow-color: rgba(129, 161, 193, 0.3);
-
-  /* General editor styles */
-
+  /* Editor styles */
   --jp-editor-selected-background: rgba(64, 64, 64, 0.6);
   --jp-editor-selected-focused-background: rgba(129, 161, 193, 0.24);
   --jp-editor-cursor-color: rgba(228, 228, 228, 0.92);
 
-  /* Code mirror specific styles - Cursor theme syntax colors */
-
+  /* CodeMirror / mirror editor colors */
   --jp-mirror-editor-keyword-color: #82d2ce;
   --jp-mirror-editor-atom-color: #82d2ce;
   --jp-mirror-editor-number-color: #a8cc7c;
@@ -371,8 +284,14 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-mirror-editor-error-color: #e34671;
   --jp-mirror-editor-hr-color: #d6d6dd;
 
-  /* User colors */
+  /* Scrollbar styles */
+  --jp-scrollbar-background-color: #181818;
+  --jp-scrollbar-thumb-color: 228, 228, 228;
+  --jp-scrollbar-endpad: 3px;
+  --jp-scrollbar-thumb-margin: 3.5px;
+  --jp-scrollbar-thumb-radius: 9px;
 
+  /* User colors */
   --jp-collaborator-color1: #ad4a00;
   --jp-collaborator-color2: #7b6a00;
   --jp-collaborator-color3: #007e00;
@@ -381,33 +300,19 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-collaborator-color6: #8b45c6;
   --jp-collaborator-color7: #be208b;
 
-  /* Vega extension styles */
-
-  --jp-vega-background: #181818;
-
-  /* Sidebar-related styles */
-
+  /* Sidebar styles */
   --jp-sidebar-min-width: 250px;
 
-  /* Search-related styles */
-
+  /* Search styles */
   --jp-search-toggle-off-opacity: 0.6;
   --jp-search-toggle-hover-opacity: 0.8;
   --jp-search-toggle-on-opacity: 1;
+  --jp-search-unselected-match-color: var(--jp-ui-inverse-font-color0);
   --jp-search-selected-match-background-color: rgba(136, 192, 208, 0.4);
   --jp-search-selected-match-color: #141414;
   --jp-search-unselected-match-background-color: rgba(136, 192, 208, 0.27);
-  --jp-search-unselected-match-color: var(--jp-ui-inverse-font-color0);
 
-  /* Scrollbar related styles */
-
-  --jp-scrollbar-background-color: #181818;
-  --jp-scrollbar-thumb-color: 228, 228, 228;
-  --jp-scrollbar-endpad: 3px;
-  --jp-scrollbar-thumb-margin: 3.5px;
-  --jp-scrollbar-thumb-radius: 9px;
-
-  /* Icon colors that work well with dark backgrounds */
+  /* Icon colors */
   --jp-icon-contrast-color0: #b48ead;
   --jp-icon-contrast-color1: #3fa266;
   --jp-icon-contrast-color2: #e34671;
@@ -424,7 +329,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-reject-color-hover: #818181;
   --jp-reject-color-active: #a0a0a0;
 
-  /* File or activity icons and switch semantic variables */
+  /* File/activity icons */
   --jp-jupyter-icon-color: #d2943e;
   --jp-notebook-icon-color: #d2943e;
   --jp-json-icon-color: #d2943e;
@@ -437,6 +342,13 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-switch-color: #626262;
   --jp-switch-true-position-color: #81a1c1;
   --jp-switch-cursor-color: rgba(228, 228, 228, 0.8);
+
+  /* Vega */
+  --jp-vega-background: #181818;
+
+  /* Shortcut buttons */
+  --jp-shortcuts-button-background: #81a1c1;
+  --jp-shortcuts-button-hover-background: #87a6c4;
 }
 
 /* Completer specific styles */

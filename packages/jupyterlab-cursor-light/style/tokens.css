@@ -1,0 +1,12 @@
+/* Additional CodeMirror 6 token styling */
+
+/* Class names and type names */
+.cm-editor .tok-className,
+.cm-editor .tok-typeName {
+  color: var(--jp-mirror-editor-header-color) !important;
+}
+
+/* Function calls */
+.cm-editor .tok-function:not(.tok-definition) {
+  color: var(--jp-mirror-editor-def-color) !important;
+}
